@@ -12,4 +12,6 @@ if (process.env.NODE_ENV === "production") {
   prisma = global.prisma;
 }
 
+// 
+
 module.exports = prisma;
