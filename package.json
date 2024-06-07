@@ -5,8 +5,6 @@
   "description": "expense-tracker-api",
   "main": "./src/index.js",
   "scripts": {
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate deploy",
     "build": "node ./src/index.js",
     "start": "node ./dist/index.js",
     "dev": "node ./src/index.js",
