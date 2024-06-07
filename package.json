@@ -1,0 +1,37 @@
+{
+  "name": "expense-tracker-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "expense-tracker-api",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "node ./src/index.js",
+    "postinstall": "yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.2.4",
+    "nodemailer": "^6.9.13",
+    "vercel": "^34.2.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
