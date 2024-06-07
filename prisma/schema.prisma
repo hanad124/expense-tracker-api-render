@@ -58,27 +58,27 @@ model Transactions {
 }
 
 model Category {
-  id          String        @id @default(auto()) @map("_id") @db.ObjectId
-  name        String        @unique
-  iconId      String        @db.ObjectId
-  userId      String        @db.ObjectId
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String   @unique
+  iconId    String   @db.ObjectId
+  userId    String   @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // relations
   transactions Transactions[]
-  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  icon         Icon         @relation(fields: [iconId], references: [id])
+  user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  icon         Icon           @relation(fields: [iconId], references: [id])
 
   // @@map("categories")
 }
 
 model Icon {
-  id        String    @id @default(auto()) @map("_id") @db.ObjectId
-  name      String    @unique
-  icon      String    @default("https://cdn-icons-png.flaticon.com/512/2920/2920320.png")
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String   @unique
+  icon      String   @default("https://cdn-icons-png.flaticon.com/512/2920/2920320.png")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // relations
   categories Category[]
@@ -86,8 +86,9 @@ model Icon {
   // @@map("icons")
 }
 
-
 enum TransactionType {
   INCOME
   EXPENSE
 }
+
+// generated prisma schema
